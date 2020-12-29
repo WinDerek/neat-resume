@@ -24,11 +24,17 @@
 
 ## 使用
 
+**编辑 `./resume/en/resume_en.tex` 和 `./resume/zh/resume_zh.tex` 并使用 `xelatex` 编译。**
+
 你可以使用以下两种方式来准备你精美的简历。
 
 ### 方法一：本地编译
 
 ### 方法二：Overleaf
+
+正在施工中。目前只读。
+
+[Overleaf](https://www.overleaf.com/read/qwhqxjyzsxjr)
 
 ## 许可
 

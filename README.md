@@ -24,11 +24,17 @@ This is an example résumé for a typical graduate. :construction_worker:
 
 ## Usage
 
+**Edit `./resume/en/resume_en.tex` and `./resume/zh/resume_zh.tex` and compile with `xelatex`.**
+
 Following are two methods for you to prepare your awesome résumé.
 
 ### Method 1: Local Compilation
 
 ### Method 2: Overleaf
+
+Under construction. Currently read-only.
+
+[Overleaf](https://www.overleaf.com/read/qwhqxjyzsxjr)
 
 ## License
 
