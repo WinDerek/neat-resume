@@ -2,11 +2,25 @@
 
 A neat résumé template made with LaTeX.
 
+[中文版请戳这里](./README_zh.md)
+
 **Please star :star: this repository if you like this template :heartbeat:**
 
-## Screenshots
+## Examples
 
 This is an example résumé for a typical graduate. :construction_worker:
+
+**English version**
+
+<img src="./screenshot/resume_en_1.png" width="600" alt="Example English Résumé Page 1" />
+
+<img src="./screenshot/resume_en_2.png" width="600" alt="Example English Résumé Page 2" />
+
+**Chinese version**
+
+<img src="./screenshot/resume_zh_1.png" width="600" alt="Example Chinese Résumé Page 1" />
+
+<img src="./screenshot/resume_zh_2.png" width="600" alt="Example Chinese Résumé Page 2" />
 
 ## Usage
 
