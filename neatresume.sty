@@ -1,0 +1,158 @@
+\ProvidesPackage{myresume}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Font settings
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setmonofont{Monaco}
+
+%\newfontfamily{\notosans}
+%[Ligatures=TeX, % recommended
+%Path=./fonts/notosans/,
+%Extension=.ttf,
+%UprightFont={*_regular},
+%ItalicFont={*_italic},
+%BoldFont={*_bold},
+%BoldItalicFont={*_bold_italic}]
+%{notosans}
+
+\setmainfont{notosans}
+[Ligatures=TeX,
+Path=../../fonts/notosans/,
+Extension=.ttf,
+UprightFont={*_regular},
+ItalicFont={*_italic},
+BoldFont={*_bold},
+BoldItalicFont={*_bold_italic}]
+
+\newfontfamily{\montserrat}
+[Ligatures=TeX,
+Path=../../fonts/montserrat/,
+Extension=.ttf,
+UprightFont={*-Regular},
+ItalicFont={*-Italic},
+BoldFont={*-Bold},
+BoldItalicFont={*-BoldItalic}]
+{Montserrat}
+
+\newfontfamily{\jetbrainsmono}
+[Ligatures=TeX,
+Path=../../fonts/jet_brains_mono/,
+Extension=.ttf,
+UprightFont={*-Regular},
+ItalicFont={*-Italic},
+BoldFont={*-Bold},
+BoldItalicFont={*-Bold-Italic}]
+{JetBrainsMono}
+
+\newfontfamily{\courierprime}
+[Ligatures=TeX,
+Path=../../fonts/courier_prime/,
+Extension=.ttf,
+UprightFont={*-Regular},
+ItalicFont={*-Italic},
+BoldFont={*-Bold},
+BoldItalicFont={*-BoldItalic}]
+{CourierPrime}
+
+% Chinese
+\usepackage{xeCJK}
+
+\setCJKmainfont{NotoSansSC}
+[Ligatures=TeX,
+Path=../../fonts/noto_sans_sc/,
+Extension=.otf,
+UprightFont={*-Regular},
+BoldFont={*-Bold}]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% For title
+
+\newcommand{\mytitle}[1]{{\montserrat\fontsize{30}{36}\selectfont \textbf{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% For icons
+
+\usepackage{graphicx}
+\usepackage{array}
+
+\newcommand{\icon}[1]{\includegraphics[width=0.5cm,trim={0 0 0 0},clip]{../../figure/icon/#1.png}}
+
+% Reference: https://tex.stackexchange.com/a/230670
+\newcommand\cincludegraphics[1]{\raisebox{-0.3\height}{\icon{#1}}}
+
+% Reference: https://tex.stackexchange.com/a/440
+\newcommand{\vcenteredicon}[1]{$
+    \setlength\tabcolsep{0pt}
+    \begin{tabular}{c}
+        %        \cincludegraphics{email} % This really centered the image in the table cell, but the icon and the text are not aligned center vertically in the final result
+        \icon{#1}
+    \end{tabular}
+    $}
+
+% Email item
+\newcommand{\email}[1]{\vcenteredicon{email} \href{mailto:#1}{\montserrat\fontsize{10}{12}\selectfont #1}}
+
+% Phone item
+\newcommand{\phone}[1]{\vcenteredicon{phone} \montserrat\fontsize{10}{12}\selectfont #1}
+
+% GitHub item
+\newcommand{\github}[2]{\vcenteredicon{github} \href{#1}{\montserrat\fontsize{10}{12}\selectfont #2}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% For section
+
+%\usepackage{tikz}
+\usepackage{xcolor}
+
+\definecolor{MyUnderlineColor}{HTML}{999999}
+
+\newcommand{\mysection}[1]{
+    \vspace*{0.2cm}
+    {\montserrat\fontsize{20}{24}\selectfont \textbf{#1}}
+    
+    \vspace*{-8pt}
+    \textcolor{MyUnderlineColor}{\rule{\textwidth}{2.0pt}}
+%    \vspace*{-8pt}
+%    \begin{tikzpicture}[every node/.style={inner sep=0,outer sep=0}]
+%        \draw[line width=1mm, color=MyUnderlineColor] (0,0) -- (\textwidth,0);
+%    \end{tikzpicture}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% For subsection
+
+\newcommand{\mysubsection}[1]{
+    \vspace*{0.cm}
+    {\fontsize{16}{19.2}\selectfont #1}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% For delimiter
+\newcommand{\mydelimiter}{
+    \vspace{-4pt}
+    \begin{tikzpicture}
+        \draw[line width=1.0pt, color=MyDelimiterColor, dash dot] (0,0) -- (\textwidth,0);
+    \end{tikzpicture}
+    \vspace{1pt}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
